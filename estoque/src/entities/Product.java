@@ -47,14 +47,15 @@ public class Product {
 	}
 	
 	public void addProducts(int quantity) {
-		this.quantity += quantity;
+		this.quantity += Math.abs(quantity);
 	}
 	
 
 	public void removeProducts(int quantity) {
-		this.quantity -= quantity;
+		this.quantity -= Math.abs(quantity);
 	}
 	
+	@Override
 	public String toString() {
 		return name 
 				+ ", $" 
